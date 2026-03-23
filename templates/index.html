@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akash Bhaduri - Portfolio</title>
     <link rel="icon" type="image/jpg" href="static/images/logo.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --bg-color: #0f172a;
@@ -23,8 +26,8 @@
         --glass-bg: rgba(15, 23, 42, 0.45);
         --glass-border: rgba(255, 255, 255, 0.12);
         --sidebar-bg: rgba(15, 23, 42, 0.7);
-        --font-sans: 'Inter', -apple-system, sans-serif;
-        --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        --font-sans: "Inter", -apple-system, sans-serif;
+        --font-mono: "JetBrains Mono", "Fira Code", monospace;
       }
 
       * {
@@ -51,20 +54,48 @@
         position: fixed;
         inset: 0;
         z-index: -1;
-        background: 
-          radial-gradient(at 0% 0%, hsla(213, 94%, 68%, 0.15) 0px, transparent 50%),
-          radial-gradient(at 50% 0%, hsla(263, 88%, 68%, 0.15) 0px, transparent 50%),
-          radial-gradient(at 100% 0%, hsla(193, 88%, 68%, 0.15) 0px, transparent 50%),
-          radial-gradient(at 50% 50%, hsla(213, 94%, 68%, 0.1) 0px, transparent 50%),
-          radial-gradient(at 0% 100%, hsla(263, 88%, 68%, 0.15) 0px, transparent 50%),
-          radial-gradient(at 100% 100%, hsla(193, 88%, 68%, 0.15) 0px, transparent 50%);
+        background:
+          radial-gradient(
+            at 0% 0%,
+            hsla(213, 94%, 68%, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 50% 0%,
+            hsla(263, 88%, 68%, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 0%,
+            hsla(193, 88%, 68%, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 50% 50%,
+            hsla(213, 94%, 68%, 0.1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 0% 100%,
+            hsla(263, 88%, 68%, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            hsla(193, 88%, 68%, 0.15) 0px,
+            transparent 50%
+          );
         filter: blur(100px);
         animation: aurora 20s ease infinite alternate;
       }
 
       @keyframes aurora {
-        0% { transform: scale(1) translate(0, 0); }
-        100% { transform: scale(1.1) translate(20px, 20px); }
+        0% {
+          transform: scale(1) translate(0, 0);
+        }
+        100% {
+          transform: scale(1.1) translate(20px, 20px);
+        }
       }
 
       /* App Container */
@@ -132,10 +163,18 @@
         background: rgba(255, 255, 255, 0.03);
       }
 
-      .ext-py { color: var(--term-green); }
-      .ext-json { color: var(--term-yellow); }
-      .ext-md { color: var(--term-blue); }
-      .ext-sh { color: var(--term-orange); }
+      .ext-py {
+        color: var(--term-green);
+      }
+      .ext-json {
+        color: var(--term-yellow);
+      }
+      .ext-md {
+        color: var(--term-blue);
+      }
+      .ext-sh {
+        color: var(--term-orange);
+      }
 
       /* Main Editor Pane */
       .main-panel {
@@ -187,9 +226,13 @@
         position: relative;
       }
 
-      .pl-mode { background: var(--accent-primary); color: #000; font-weight: 900; }
+      .pl-mode {
+        background: var(--accent-primary);
+        color: #000;
+        font-weight: 900;
+      }
       .pl-mode::after {
-        content: '';
+        content: "";
         position: absolute;
         right: -12px;
         border-left: 12px solid var(--accent-primary);
@@ -198,9 +241,12 @@
         z-index: 1;
       }
 
-      .pl-branch { background: #334155; padding-left: 1.5rem; }
+      .pl-branch {
+        background: #334155;
+        padding-left: 1.5rem;
+      }
       .pl-branch::after {
-        content: '';
+        content: "";
         position: absolute;
         right: -12px;
         border-left: 12px solid #334155;
@@ -218,11 +264,23 @@
         font-size: 1.1rem;
       }
 
-      .prompt-user { color: var(--term-green); font-weight: bold; }
-      .prompt-at { color: var(--text-dim); }
-      .prompt-host { color: var(--accent-primary); font-weight: bold; }
-      .prompt-dir { color: var(--accent-secondary); }
-      .prompt-cmd { color: #fff; }
+      .prompt-user {
+        color: var(--term-green);
+        font-weight: bold;
+      }
+      .prompt-at {
+        color: var(--text-dim);
+      }
+      .prompt-host {
+        color: var(--accent-primary);
+        font-weight: bold;
+      }
+      .prompt-dir {
+        color: var(--accent-secondary);
+      }
+      .prompt-cmd {
+        color: #fff;
+      }
 
       /* Syntax Highlighted Content */
       .code-block {
@@ -236,10 +294,19 @@
         position: relative;
       }
 
-      .syntax-key { color: var(--accent-tertiary); }
-      .syntax-string { color: var(--term-yellow); }
-      .syntax-comment { color: var(--text-dim); font-style: italic; }
-      .syntax-bool { color: var(--term-orange); }
+      .syntax-key {
+        color: var(--accent-tertiary);
+      }
+      .syntax-string {
+        color: var(--term-yellow);
+      }
+      .syntax-comment {
+        color: var(--text-dim);
+        font-style: italic;
+      }
+      .syntax-bool {
+        color: var(--term-orange);
+      }
 
       /* Sectioning */
       section {
@@ -288,7 +355,9 @@
       }
 
       @keyframes blink {
-        50% { opacity: 0; }
+        50% {
+          opacity: 0;
+        }
       }
 
       /* Project Grid Upgrade */
@@ -367,20 +436,25 @@
   <body>
     <div class="mesh-gradient"></div>
 
-    <!-- Minimalist Loader -->
     <div id="boot-loader">
       <div class="loader-content">
         <div class="loader-logo">AB</div>
-        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">BOOTING_TERMINAL_SESSION...</div>
+        <div
+          style="
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-dim);
+          "
+        >
+          BOOTING_TERMINAL_SESSION...
+        </div>
       </div>
     </div>
 
     <div class="app-container">
       <!-- Nvim-Tree Sidebar -->
       <aside class="sidebar">
-        <div class="sidebar-header">
-          <span></span> <span>EXPLORER</span>
-        </div>
+        <div class="sidebar-header"><span></span> <span>EXPLORER</span></div>
         <ul class="file-tree">
           <li class="file-item">
             <a href="#home" class="file-link active">
@@ -404,9 +478,18 @@
           </li>
         </ul>
 
-        <div style="margin-top: auto;">
-          <div class="powerline" style="background: var(--accent-secondary);">
-            <div class="pl-segment" style="background: var(--accent-secondary); color: #000; font-weight: bold;"> TREE</div>
+        <div style="margin-top: auto">
+          <div class="powerline" style="background: var(--accent-secondary)">
+            <div
+              class="pl-segment"
+              style="
+                background: var(--accent-secondary);
+                color: #000;
+                font-weight: bold;
+              "
+            >
+               TREE
+            </div>
           </div>
         </div>
       </aside>
@@ -414,15 +497,21 @@
       <!-- Main Terminal Editor -->
       <main class="main-panel">
         <header class="editor-header">
-          <div style="display: flex; gap: 1rem; align-items: center;">
-            <span style="color: var(--term-green);">●</span>
-            <span style="color: var(--term-yellow);">●</span>
-            <span style="color: var(--term-orange);">●</span>
-            <span style="margin-left: 1rem; opacity: 0.6;">akash@void: ~/portfolio/<span id="current-filename">index.py</span></span>
+          <div style="display: flex; gap: 1rem; align-items: center">
+            <span style="color: var(--term-green)">●</span>
+            <span style="color: var(--term-yellow)">●</span>
+            <span style="color: var(--term-orange)">●</span>
+            <span style="margin-left: 1rem; opacity: 0.6"
+              >akash@void: ~/portfolio/<span id="current-filename"
+                >index.py</span
+              ></span
+            >
           </div>
           <div class="system-stats">
             <div>CPU: <span class="stat-val" id="cpu-stat">12%</span></div>
-            <div>UPTIME: <span class="stat-val" id="uptime-stat">00:00:00</span></div>
+            <div>
+              UPTIME: <span class="stat-val" id="uptime-stat">00:00:00</span>
+            </div>
           </div>
         </header>
 
@@ -430,225 +519,719 @@
           <!-- Home Section -->
           <section id="home" class="visible">
             <div class="term-prompt">
-              <span class="prompt-user">akash</span><span class="prompt-at">@</span><span class="prompt-host">void</span><span class="prompt-at">:</span><span class="prompt-dir">~</span><span class="prompt-at">$</span>
+              <span class="prompt-user">akash</span
+              ><span class="prompt-at">@</span
+              ><span class="prompt-host">void</span
+              ><span class="prompt-at">:</span><span class="prompt-dir">~</span
+              ><span class="prompt-at">$</span>
               <span class="prompt-cmd">whoami --full</span>
             </div>
 
-            <div class="hero-content" style="padding-left: 1rem;">
-              <h1 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -2px;">AKASH BHADURI</h1>
-              <div style="font-family: var(--font-mono); color: var(--accent-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">
+            <div class="hero-content" style="padding-left: 1rem">
+              <h1
+                style="
+                  font-size: 4.5rem;
+                  font-weight: 900;
+                  margin-bottom: 0.5rem;
+                  letter-spacing: -2px;
+                "
+              >
+                AKASH BHADURI
+              </h1>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--accent-primary);
+                  font-size: 1.2rem;
+                  margin-bottom: 0.5rem;
+                "
+              >
                 > Python Developer × Machine Learning Explorer
               </div>
-              <div style="font-family: var(--font-mono); color: var(--text-dim); font-size: 1rem; margin-bottom: 2rem;">
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--text-dim);
+                  font-size: 1rem;
+                  margin-bottom: 2rem;
+                "
+              >
                 Currently building an LLM from scratch.
               </div>
-              
+
               <div class="code-block">
                 <div class="syntax-comment"># System Description</div>
-                <div><span class="syntax-key">philosophy</span>: <span class="syntax-string">"If you wanna waste time, then waste it on learning something."</span></div>
-                <div><span class="syntax-key">status</span>: <span class="syntax-bool">Ready for next deployment</span></div>
+                <div>
+                  <span class="syntax-key">philosophy</span>:
+                  <span class="syntax-string"
+                    >"If you wanna waste time, then waste it on learning
+                    something."</span
+                  >
+                </div>
+                <div>
+                  <span class="syntax-key">status</span>:
+                  <span class="syntax-bool">Ready for next deployment</span>
+                </div>
               </div>
 
-              <div style="margin-top: 2rem;">
-                <span class="prompt-cmd">sh ./view_projects.sh</span><span class="cursor"></span>
+              <div style="margin-top: 2rem">
+                <span class="prompt-cmd">sh ./view_projects.sh</span
+                ><span class="cursor"></span>
               </div>
             </div>
           </section>
 
           <!-- Work Section -->
           <section id="work">
-            <p style="color: var(--text-dim); margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.9rem; border-left: 2px solid var(--accent-primary); padding-left: 1.5rem;">
-              A collection of projects exploring developer tooling, automation, and experimental systems — including my ongoing work building a language model from scratch.
+            <p
+              style="
+                color: var(--text-dim);
+                margin-bottom: 2rem;
+                font-family: var(--font-mono);
+                font-size: 0.9rem;
+                border-left: 2px solid var(--accent-primary);
+                padding-left: 1.5rem;
+              "
+            >
+              A collection of projects exploring developer tooling, automation,
+              and experimental systems — including my ongoing work building a
+              language model from scratch.
             </p>
             <div class="term-prompt">
-              <span class="prompt-user">akash</span><span class="prompt-at">@</span><span class="prompt-host">void</span><span class="prompt-at">:</span><span class="prompt-dir">~/projects</span><span class="prompt-at">$</span>
+              <span class="prompt-user">akash</span
+              ><span class="prompt-at">@</span
+              ><span class="prompt-host">void</span
+              ><span class="prompt-at">:</span
+              ><span class="prompt-dir">~/projects</span
+              ><span class="prompt-at">$</span>
               <span class="prompt-cmd">ls -la --color=always</span>
             </div>
 
             <div class="projects-grid">
               <div class="project-node">
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin-bottom: 1rem;">drwxr-xr-x  akash  staff</div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">NeoVim Setup</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1.5rem;">Advanced Lua-based configuration featuring tree-sitter, LSP, and a highly customized UI for maximum productivity.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--term-green);">src/config.lua</span>
-                  <a href="https://github.com/akash-bhaduri/neovim" target="_blank" style="color: var(--accent-tertiary); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">GIT_PULL -></a>
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1rem;
+                  "
+                >
+                  drwxr-xr-x akash staff
+                </div>
+                <h3 style="color: var(--accent-primary); margin-bottom: 1rem">
+                  Axiom-1
+                </h3>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  A gpt2 architecture based large language model from scratch.
+                  This is also an educational repo, from which students can
+                  learn various aspects of a llm and its core architecture.
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                      color: var(--term-green);
+                    "
+                    >src/config.lua</span
+                  >
+                  <a
+                    href="https://github.com/akash-bhaduri/axiom-1"
+                    target="_blank"
+                    style="
+                      color: var(--accent-tertiary);
+                      text-decoration: none;
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                    "
+                    >GIT_PULL -></a
+                  >
                 </div>
               </div>
 
               <div class="project-node">
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin-bottom: 1rem;">-rw-r--r--  akash  staff</div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Terminal Blog</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1.5rem;">A full-stack technical blog optimized for reading experience and rapid deployment of tech insights.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--term-green);">app/main.py</span>
-                  <a href="https://github.com/akash-bhaduri/Terminal-blog" target="_blank" style="color: var(--accent-tertiary); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">GIT_PULL -></a>
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1rem;
+                  "
+                >
+                  -rw-r--r-- akash staff
+                </div>
+                <h3 style="color: var(--accent-primary); margin-bottom: 1rem">
+                  Terminal Blog
+                </h3>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  A full-stack technical blog optimized for reading experience
+                  and rapid deployment of tech insights.
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                      color: var(--term-green);
+                    "
+                    >app/main.py</span
+                  >
+                  <a
+                    href="https://github.com/akash-bhaduri/Terminal-blog"
+                    target="_blank"
+                    style="
+                      color: var(--accent-tertiary);
+                      text-decoration: none;
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                    "
+                    >GIT_PULL -></a
+                  >
                 </div>
               </div>
 
               <div class="project-node">
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin-bottom: 1rem;">-rwxr-xr-x  akash  staff</div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Morse Converter</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1.5rem;">Real-time translation engine with focus-mode features designed for distraction-free operation.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--term-green);">bin/convert.py</span>
-                  <a href="https://github.com/akash-bhaduri/morse-code-converter" target="_blank" style="color: var(--accent-tertiary); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">GIT_PULL -></a>
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1rem;
+                  "
+                >
+                  -rwxr-xr-x akash staff
+                </div>
+                <h3 style="color: var(--accent-primary); margin-bottom: 1rem">
+                  Morse Converter
+                </h3>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  Real-time translation engine with focus-mode features designed
+                  for distraction-free operation.
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                      color: var(--term-green);
+                    "
+                    >bin/convert.py</span
+                  >
+                  <a
+                    href="https://github.com/akash-bhaduri/morse-code-converter"
+                    target="_blank"
+                    style="
+                      color: var(--accent-tertiary);
+                      text-decoration: none;
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                    "
+                    >GIT_PULL -></a
+                  >
                 </div>
               </div>
 
               <div class="project-node">
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin-bottom: 1rem;">-rw-r--r--  akash  staff</div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Tic-Tac-Toe</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1.5rem;">Pure terminal game logic exploring core Python performance and CLI rendering techniques.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--term-green);">games/tic_tac.py</span>
-                  <a href="https://github.com/akash-bhaduri/tic-tac-toe" target="_blank" style="color: var(--accent-tertiary); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">GIT_PULL -></a>
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1rem;
+                  "
+                >
+                  -rw-r--r-- akash staff
+                </div>
+                <h3 style="color: var(--accent-primary); margin-bottom: 1rem">
+                  Tic-Tac-Toe
+                </h3>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-dim);
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  Pure terminal game logic exploring core Python performance and
+                  CLI rendering techniques.
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                      color: var(--term-green);
+                    "
+                    >games/tic_tac.py</span
+                  >
+                  <a
+                    href="https://github.com/akash-bhaduri/tic-tac-toe"
+                    target="_blank"
+                    style="
+                      color: var(--accent-tertiary);
+                      text-decoration: none;
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                    "
+                    >GIT_PULL -></a
+                  >
                 </div>
               </div>
             </div>
-            
-            <div style="margin-top: 3rem;">
-              <span class="prompt-user">akash@void</span><span class="prompt-at">:</span><span class="prompt-dir">~/projects</span><span class="prompt-at">$</span><span class="cursor"></span>
+
+            <div style="margin-top: 3rem">
+              <span class="prompt-user">akash@void</span
+              ><span class="prompt-at">:</span
+              ><span class="prompt-dir">~/projects</span
+              ><span class="prompt-at">$</span><span class="cursor"></span>
             </div>
           </section>
 
           <!-- About Section -->
           <section id="about">
             <div class="term-prompt">
-              <span class="prompt-user">akash</span><span class="prompt-at">@</span><span class="prompt-host">void</span><span class="prompt-at">:</span><span class="prompt-dir">~</span><span class="prompt-at">$</span>
+              <span class="prompt-user">akash</span
+              ><span class="prompt-at">@</span
+              ><span class="prompt-host">void</span
+              ><span class="prompt-at">:</span><span class="prompt-dir">~</span
+              ><span class="prompt-at">$</span>
               <span class="prompt-cmd">cat profile.md</span>
             </div>
 
             <div class="code-block">
               <div class="syntax-comment"># Developer Identity</div>
-              <p style="margin-bottom: 1rem;">I'm a B.Tech ECE graduate who enjoys understanding how systems work "under the hood". My interests span Python development, machine learning, and developer tooling.</p>
-              <p style="margin-bottom: 1rem;">Recently I've been diving deep into the internals of large language models — building components like tokenizers, attention mechanisms, and training pipelines from scratch to understand how modern AI systems actually work.</p>
-              <p>Outside of coding, I enjoy experimenting with terminal setups, creating 3D characters in Blender, and gaming.</p>
-              
-              <div style="margin-top: 2rem;">
+              <p style="margin-bottom: 1rem">
+                I'm a B.Tech ECE graduate who enjoys understanding how systems
+                work "under the hood". My interests span Python development,
+                machine learning, and developer tooling.
+              </p>
+              <p style="margin-bottom: 1rem">
+                Recently I've been diving deep into the internals of large
+                language models — building components like tokenizers, attention
+                mechanisms, and training pipelines from scratch to understand
+                how modern AI systems actually work.
+              </p>
+              <p>
+                Outside of coding, I enjoy experimenting with terminal setups,
+                creating 3D characters in Blender, and gaming.
+              </p>
+
+              <div style="margin-top: 2rem">
                 <span class="syntax-key">tech_stack</span>: [
-                  <span class="syntax-string">"Python"</span>, <span class="syntax-string">"PyTorch"</span>, <span class="syntax-string">"NeoVim"</span>, <span class="syntax-string">"PostgreSQL"</span>, 
-                  <span class="syntax-string">"Flask"</span>, <span class="syntax-string">"Lua"</span>, <span class="syntax-string">"Blender"</span>, <span class="syntax-string">"Linux"</span>, <span class="syntax-string">"Git"</span>
+                <span class="syntax-string">"Python"</span>,
+                <span class="syntax-string">"PyTorch"</span>,
+                <span class="syntax-string">"NeoVim"</span>,
+                <span class="syntax-string">"PostgreSQL"</span>,
+                <span class="syntax-string">"Flask"</span>,
+                <span class="syntax-string">"Lua"</span>,
+                <span class="syntax-string">"Blender"</span>,
+                <span class="syntax-string">"Linux"</span>,
+                <span class="syntax-string">"Git"</span>
                 ]
               </div>
             </div>
 
-            <div style="margin-top: 4rem;">
+            <div style="margin-top: 4rem">
               <div class="section-title-line">
                 <h2>Active_Kernel_Modules</h2>
                 <div class="section-divider"></div>
               </div>
-              <div class="code-block" style="border-left: 4px solid var(--accent-tertiary); background: rgba(0,0,0,0.4);">
+              <div
+                class="code-block"
+                style="
+                  border-left: 4px solid var(--accent-tertiary);
+                  background: rgba(0, 0, 0, 0.4);
+                "
+              >
                 <div class="syntax-comment"># Parallel Learning Streams</div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-top: 2rem;">
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                    gap: 3rem;
+                    margin-top: 2rem;
+                  "
+                >
                   <div class="learning-module">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                      <span style="color: var(--accent-primary); font-size: 1.2rem;">󰚔</span>
-                      <span class="syntax-key" style="font-size: 1rem; letter-spacing: 1px;">TRANSFORMER_CORE</span>
-                      <span style="margin-left: auto; background: var(--term-green); color: #000; font-size: 0.65rem; padding: 0.1rem 0.5rem; font-weight: 900; border-radius: 2px;">ACTIVE</span>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+                      "
+                    >
+                      <span
+                        style="color: var(--accent-primary); font-size: 1.2rem"
+                        >󰚔</span
+                      >
+                      <span
+                        class="syntax-key"
+                        style="font-size: 1rem; letter-spacing: 1px"
+                        >TRANSFORMER_CORE</span
+                      >
+                      <span
+                        style="
+                          margin-left: auto;
+                          background: var(--term-green);
+                          color: #000;
+                          font-size: 0.65rem;
+                          padding: 0.1rem 0.5rem;
+                          font-weight: 900;
+                          border-radius: 2px;
+                        "
+                        >ACTIVE</span
+                      >
                     </div>
-                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-primary); background: rgba(56, 189, 248, 0.05); padding: 0.75rem; border: 1px solid rgba(56, 189, 248, 0.1);">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <div
+                      style="
+                        font-family: var(--font-mono);
+                        font-size: 0.75rem;
+                        color: var(--accent-primary);
+                        background: rgba(56, 189, 248, 0.05);
+                        padding: 0.75rem;
+                        border: 1px solid rgba(56, 189, 248, 0.1);
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          justify-content: space-between;
+                          margin-bottom: 0.4rem;
+                        "
+                      >
                         <span>Architecture Mapping</span>
-                        <span style="color: var(--text-dim);">50%</span>
+                        <span style="color: var(--text-dim)">50%</span>
                       </div>
-                      <div style="letter-spacing: 2px;">[■■■■■■■■■■□□■■■■■■■■]</div>
+                      <div style="letter-spacing: 2px">
+                        [■■■■■■■■■■□□■■■■■■■■]
+                      </div>
                     </div>
                   </div>
 
                   <div class="learning-module">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                      <span style="color: var(--accent-secondary); font-size: 1.2rem;">󰋙</span>
-                      <span class="syntax-key" style="font-size: 1rem; letter-spacing: 1px;">ATTENTION_MECH</span>
-                      <span style="margin-left: auto; background: var(--accent-secondary); color: #000; font-size: 0.65rem; padding: 0.1rem 0.5rem; font-weight: 900; border-radius: 2px;">RUNNING</span>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+                      "
+                    >
+                      <span
+                        style="
+                          color: var(--accent-secondary);
+                          font-size: 1.2rem;
+                        "
+                        >󰋙</span
+                      >
+                      <span
+                        class="syntax-key"
+                        style="font-size: 1rem; letter-spacing: 1px"
+                        >ATTENTION_MECH</span
+                      >
+                      <span
+                        style="
+                          margin-left: auto;
+                          background: var(--accent-secondary);
+                          color: #000;
+                          font-size: 0.65rem;
+                          padding: 0.1rem 0.5rem;
+                          font-weight: 900;
+                          border-radius: 2px;
+                        "
+                        >RUNNING</span
+                      >
                     </div>
-                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-secondary); background: rgba(129, 140, 248, 0.05); padding: 0.75rem; border: 1px solid rgba(129, 140, 248, 0.1);">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <div
+                      style="
+                        font-family: var(--font-mono);
+                        font-size: 0.75rem;
+                        color: var(--accent-secondary);
+                        background: rgba(129, 140, 248, 0.05);
+                        padding: 0.75rem;
+                        border: 1px solid rgba(129, 140, 248, 0.1);
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          justify-content: space-between;
+                          margin-bottom: 0.4rem;
+                        "
+                      >
                         <span>Mathematical Logic</span>
-                        <span style="color: var(--text-dim);">70%</span>
+                        <span style="color: var(--text-dim)">70%</span>
                       </div>
-                      <div style="letter-spacing: 2px;">[■■■■■■■■■■■■■■□□□□□□]</div>
+                      <div style="letter-spacing: 2px">
+                        [■■■■■■■■■■■■■■□□□□□□]
+                      </div>
                     </div>
                   </div>
 
                   <div class="learning-module">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                      <span style="color: var(--term-green); font-size: 1.2rem;">󰢚</span>
-                      <span class="syntax-key" style="font-size: 1rem; letter-spacing: 1px;">PYTORCH_WORKFLOW</span>
-                      <span style="margin-left: auto; background: var(--term-green); color: #000; font-size: 0.65rem; padding: 0.1rem 0.5rem; font-weight: 900; border-radius: 2px;">OPTIMIZING</span>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+                      "
+                    >
+                      <span style="color: var(--term-green); font-size: 1.2rem"
+                        >󰢚</span
+                      >
+                      <span
+                        class="syntax-key"
+                        style="font-size: 1rem; letter-spacing: 1px"
+                        >PYTORCH_WORKFLOW</span
+                      >
+                      <span
+                        style="
+                          margin-left: auto;
+                          background: var(--term-green);
+                          color: #000;
+                          font-size: 0.65rem;
+                          padding: 0.1rem 0.5rem;
+                          font-weight: 900;
+                          border-radius: 2px;
+                        "
+                        >OPTIMIZING</span
+                      >
                     </div>
-                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--term-green); background: rgba(16, 185, 129, 0.05); padding: 0.75rem; border: 1px solid rgba(16, 185, 129, 0.1);">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <div
+                      style="
+                        font-family: var(--font-mono);
+                        font-size: 0.75rem;
+                        color: var(--term-green);
+                        background: rgba(16, 185, 129, 0.05);
+                        padding: 0.75rem;
+                        border: 1px solid rgba(16, 185, 129, 0.1);
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          justify-content: space-between;
+                          margin-bottom: 0.4rem;
+                        "
+                      >
                         <span>Deep Learning Ops</span>
-                        <span style="color: var(--text-dim);">60%</span>
+                        <span style="color: var(--text-dim)">60%</span>
                       </div>
-                      <div style="letter-spacing: 2px;">[■■■■■■■■■■■■□□□□□□□□]</div>
+                      <div style="letter-spacing: 2px">
+                        [■■■■■■■■■■■■□□□□□□□□]
+                      </div>
                     </div>
                   </div>
 
                   <div class="learning-module">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                      <span style="color: var(--term-yellow); font-size: 1.2rem;">󱁤</span>
-                      <span class="syntax-key" style="font-size: 1rem; letter-spacing: 1px;">LLM_PIPELINES</span>
-                      <span style="margin-left: auto; background: var(--term-yellow); color: #000; font-size: 0.65rem; padding: 0.1rem 0.5rem; font-weight: 900; border-radius: 2px;">SCAFFOLD</span>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+                      "
+                    >
+                      <span style="color: var(--term-yellow); font-size: 1.2rem"
+                        >󱁤</span
+                      >
+                      <span
+                        class="syntax-key"
+                        style="font-size: 1rem; letter-spacing: 1px"
+                        >LLM_PIPELINES</span
+                      >
+                      <span
+                        style="
+                          margin-left: auto;
+                          background: var(--term-yellow);
+                          color: #000;
+                          font-size: 0.65rem;
+                          padding: 0.1rem 0.5rem;
+                          font-weight: 900;
+                          border-radius: 2px;
+                        "
+                        >SCAFFOLD</span
+                      >
                     </div>
-                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--term-yellow); background: rgba(245, 158, 11, 0.05); padding: 0.75rem; border: 1px solid rgba(245, 158, 11, 0.1);">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <div
+                      style="
+                        font-family: var(--font-mono);
+                        font-size: 0.75rem;
+                        color: var(--term-yellow);
+                        background: rgba(245, 158, 11, 0.05);
+                        padding: 0.75rem;
+                        border: 1px solid rgba(245, 158, 11, 0.1);
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          justify-content: space-between;
+                          margin-bottom: 0.4rem;
+                        "
+                      >
                         <span>Tokenization Engine</span>
-                        <span style="color: var(--text-dim);">40%</span>
+                        <span style="color: var(--text-dim)">40%</span>
                       </div>
-                      <div style="letter-spacing: 2px;">[■■■■■■■■□□□□□□□□□□□□]</div>
+                      <div style="letter-spacing: 2px">
+                        [■■■■■■■■□□□□□□□□□□□□]
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div style="margin-top: 4rem;">
+            <div style="margin-top: 4rem">
               <div class="section-title-line">
                 <h2>Currently Documenting</h2>
                 <div class="section-divider"></div>
               </div>
               <div class="code-block">
                 <div class="syntax-comment"># Progress Tracking</div>
-                <p style="margin-bottom: 1rem; color: var(--accent-primary);">Building a transformer-based language model from scratch.</p>
-                <p style="color: var(--text-dim); margin-bottom: 2rem;">Weekly notes, experiments, and architecture breakdowns.</p>
-                
-                <div style="display: flex; gap: 2rem; font-family: var(--font-mono); font-size: 0.85rem;">
-                  <a href="https://github.com/akash-bhaduri" target="_blank" style="color: var(--accent-tertiary); text-decoration: none;">[ GITHUB_REPO ]</a>
-                  <a href="#" style="color: var(--accent-tertiary); text-decoration: none;">[ BLOG ]</a>
-                  <a href="#" style="color: var(--accent-tertiary); text-decoration: none;">[ NOTES ]</a>
+                <p style="margin-bottom: 1rem; color: var(--accent-primary)">
+                  Building a transformer-based language model from scratch.
+                </p>
+                <p style="color: var(--text-dim); margin-bottom: 2rem">
+                  Weekly notes, experiments, and architecture breakdowns.
+                </p>
+
+                <div
+                  style="
+                    display: flex;
+                    gap: 2rem;
+                    font-family: var(--font-mono);
+                    font-size: 0.85rem;
+                  "
+                >
+                  <a
+                    href="https://github.com/akash-bhaduri/axiom-1"
+                    target="_blank"
+                    style="color: var(--accent-tertiary); text-decoration: none"
+                    >[ GITHUB_REPO ]</a
+                  >
+                  <a
+                    href="#"
+                    style="color: var(--accent-tertiary); text-decoration: none"
+                    >[ BLOG ]</a
+                  >
+                  <a
+                    href="#"
+                    style="color: var(--accent-tertiary); text-decoration: none"
+                    >[ NOTES ]</a
+                  >
                 </div>
               </div>
             </div>
 
-            <div style="margin-top: 2rem;">
-              <span class="prompt-cmd">vim ./life_motto.txt</span><span class="cursor"></span>
+            <div style="margin-top: 2rem">
+              <span class="prompt-cmd">vim ./life_motto.txt</span
+              ><span class="cursor"></span>
             </div>
           </section>
 
           <!-- Contact Section -->
           <section id="contact">
             <div class="term-prompt">
-              <span class="prompt-user">akash</span><span class="prompt-at">@</span><span class="prompt-host">void</span><span class="prompt-at">:</span><span class="prompt-dir">~</span><span class="prompt-at">$</span>
+              <span class="prompt-user">akash</span
+              ><span class="prompt-at">@</span
+              ><span class="prompt-host">void</span
+              ><span class="prompt-at">:</span><span class="prompt-dir">~</span
+              ><span class="prompt-at">$</span>
               <span class="prompt-cmd">sudo mail --to "Akash Bhaduri"</span>
             </div>
 
             <div class="code-block">
               <div class="syntax-comment"># Establish handshake...</div>
-              <form action="#" method="POST" style="margin-top: 1rem;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+              <form action="#" method="POST" style="margin-top: 1rem">
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1.5rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
                   <div>
-                    <label class="syntax-key" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">INPUT_NAME:</label>
+                    <label
+                      class="syntax-key"
+                      style="
+                        font-size: 0.75rem;
+                        display: block;
+                        margin-bottom: 0.5rem;
+                      "
+                      >INPUT_NAME:</label
+                    >
                     <input type="text" class="term-input" required />
                   </div>
                   <div>
-                    <label class="syntax-key" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">INPUT_EMAIL:</label>
+                    <label
+                      class="syntax-key"
+                      style="
+                        font-size: 0.75rem;
+                        display: block;
+                        margin-bottom: 0.5rem;
+                      "
+                      >INPUT_EMAIL:</label
+                    >
                     <input type="email" class="term-input" required />
                   </div>
                 </div>
                 <div>
-                  <label class="syntax-key" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">MESSAGE_BODY:</label>
+                  <label
+                    class="syntax-key"
+                    style="
+                      font-size: 0.75rem;
+                      display: block;
+                      margin-bottom: 0.5rem;
+                    "
+                    >MESSAGE_BODY:</label
+                  >
                   <textarea class="term-input" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="term-btn">SEND_PACKET</button>
@@ -661,20 +1244,34 @@
         <footer class="powerline">
           <div class="pl-segment pl-mode">NORMAL</div>
           <div class="pl-segment pl-branch"> main</div>
-          <div class="pl-segment" style="margin-left: auto; background: #334155;">akash-bhaduri</div>
-          <div class="pl-segment" style="background: var(--accent-secondary); color: #000; font-weight: bold;">UTF-8</div>
+          <div
+            class="pl-segment"
+            style="margin-left: auto; background: #334155"
+          >
+            akash-bhaduri
+          </div>
+          <div
+            class="pl-segment"
+            style="
+              background: var(--accent-secondary);
+              color: #000;
+              font-weight: bold;
+            "
+          >
+            UTF-8
+          </div>
         </footer>
       </main>
     </div>
 
     <script>
       // Smooth Workspace Entrance
-      window.addEventListener('load', () => {
-        const loader = document.getElementById('boot-loader');
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("boot-loader");
         setTimeout(() => {
-          loader.style.opacity = '0';
+          loader.style.opacity = "0";
           setTimeout(() => {
-            loader.style.display = 'none';
+            loader.style.display = "none";
           }, 800);
         }, 1500);
       });
@@ -682,7 +1279,7 @@
       // System Metrics Simulation
       function updateMetrics() {
         const cpu = Math.floor(Math.random() * (15 - 4) + 4);
-        document.getElementById('cpu-stat').textContent = `${cpu}%`;
+        document.getElementById("cpu-stat").textContent = `${cpu}%`;
       }
       setInterval(updateMetrics, 2500);
 
@@ -690,57 +1287,65 @@
       let uptimeSeconds = 0;
       function updateUptime() {
         uptimeSeconds++;
-        const hrs = Math.floor(uptimeSeconds / 3600).toString().padStart(2, '0');
-        const mins = Math.floor((uptimeSeconds % 3600) / 60).toString().padStart(2, '0');
-        const secs = (uptimeSeconds % 60).toString().padStart(2, '0');
-        document.getElementById('uptime-stat').textContent = `${hrs}:${mins}:${secs}`;
+        const hrs = Math.floor(uptimeSeconds / 3600)
+          .toString()
+          .padStart(2, "0");
+        const mins = Math.floor((uptimeSeconds % 3600) / 60)
+          .toString()
+          .padStart(2, "0");
+        const secs = (uptimeSeconds % 60).toString().padStart(2, "0");
+        document.getElementById("uptime-stat").textContent =
+          `${hrs}:${mins}:${secs}`;
       }
       setInterval(updateUptime, 1000);
 
       // Section Interaction & Sidebar Sync
-      const sections = document.querySelectorAll('section');
-      const fileLinks = document.querySelectorAll('.file-link');
-      const filenameDisplay = document.getElementById('current-filename');
-      const panel = document.querySelector('.editor-content'); // Scroll container is now editor-content
+      const sections = document.querySelectorAll("section");
+      const fileLinks = document.querySelectorAll(".file-link");
+      const filenameDisplay = document.getElementById("current-filename");
+      const panel = document.querySelector(".editor-content"); // Scroll container is now editor-content
 
       const filenames = {
-        'home': 'index.py',
-        'work': 'projects.json',
-        'about': 'profile.md',
-        'contact': 'contact.sh'
+        home: "index.py",
+        work: "projects.json",
+        about: "profile.md",
+        contact: "contact.sh",
       };
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            const id = entry.target.getAttribute('id');
-            
-            // Sync Sidebar
-            fileLinks.forEach(link => {
-              const isActive = link.getAttribute('href') === `#${id}`;
-              link.classList.toggle('active', isActive);
-              if (isActive) {
-                filenameDisplay.textContent = filenames[id];
-              }
-            });
-          }
-        });
-      }, { 
-        root: panel,
-        threshold: 0.3 
-      });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              const id = entry.target.getAttribute("id");
 
-      sections.forEach(section => observer.observe(section));
+              // Sync Sidebar
+              fileLinks.forEach((link) => {
+                const isActive = link.getAttribute("href") === `#${id}`;
+                link.classList.toggle("active", isActive);
+                if (isActive) {
+                  filenameDisplay.textContent = filenames[id];
+                }
+              });
+            }
+          });
+        },
+        {
+          root: panel,
+          threshold: 0.3,
+        },
+      );
+
+      sections.forEach((section) => observer.observe(section));
 
       // Sidebar Navigation
-      fileLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+      fileLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
           e.preventDefault();
-          const targetId = this.getAttribute('href');
+          const targetId = this.getAttribute("href");
           const target = document.querySelector(targetId);
           if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ behavior: "smooth" });
           }
         });
       });
